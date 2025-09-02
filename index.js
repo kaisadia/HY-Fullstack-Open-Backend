@@ -17,8 +17,8 @@ app.get("/", (request, respose) => {
 });
 
 app.get("/api/persons", (request, response) => {
-  Person.find({}).then((people) => {
-    response.json(people);
+  Person.find({}).then((persons) => {
+    response.json(persons);
   });
 });
 
@@ -49,7 +49,7 @@ app.delete("/api/persons/:id", (request, response) => {
 });
 */
 
-app.post("/api/persons/", (request, response) => {
+app.post("/api/persons", (request, response) => {
   const body = request.body;
 
   if (body.name === undefined) {
