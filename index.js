@@ -16,7 +16,7 @@ app.get("/", (request, respose) => {
   respose.send("<h1>Hello World</h1>");
 });
 
-app.get("/api/people", (request, response) => {
+app.get("/api/persons", (request, response) => {
   Person.find({}).then((people) => {
     response.json(people);
   });
